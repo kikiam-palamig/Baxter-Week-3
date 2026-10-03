@@ -1,0 +1,157 @@
+/* ==========================================================================
+   GLOBAL STYLES & THEME VARIABLES
+   ========================================================================== */
+
+:root {
+  --space-dark: #0a0c10;
+  --space-card-bg: rgba(255, 255, 255, 0.03);
+  --space-accent: #0dcaf0;
+  --space-accent-glow: rgba(13, 202, 240, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--space-dark);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.navbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(10, 12, 16, 0.85) !important;
+}
+
+.brand-logo {
+  font-size: 1.4rem;
+  margin-right: 0.3rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-link {
+  color: #a0aaba !important;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--space-accent) !important;
+}
+
+/* ==========================================================================
+   WELCOME BANNER
+   ========================================================================== */
+
+.welcome-banner {
+  margin-top: 56px;
+  background: linear-gradient(90deg, rgba(13, 202, 240, 0.18), rgba(111, 66, 193, 0.18));
+  border-bottom: 1px solid rgba(13, 202, 240, 0.3);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  background: radial-gradient(circle at 80% 20%, rgba(13, 202, 240, 0.12) 0%, transparent 40%),
+              radial-gradient(circle at 10% 80%, rgba(111, 66, 193, 0.15) 0%, transparent 40%);
+}
+
+.hero-card {
+  position: relative;
+  background: var(--space-card-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.illustration-circle {
+  display: inline-block;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-card {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: rgba(13, 202, 240, 0.08);
+  border: 1px solid rgba(13, 202, 240, 0.3);
+  color: var(--space-accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   FEATURES & CARDS (PHENOMENA)
+   ========================================================================== */
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-description {
+  max-width: 600px;
+}
+
+.feature-card {
+  background: var(--space-card-bg) !important;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--space-accent) !important;
+  box-shadow: 0 10px 25px var(--space-accent-glow);
+}
+
+/* ==========================================================================
+   ABOUT / MISSIONS
+   ========================================================================== */
+
+.about-box {
+  background: var(--space-card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   CALL TO ACTION & FOOTER
+   ========================================================================== */
+
+.cta-section {
+  background: linear-gradient(135deg, #0dcaf0 0%, #0d6efd 100%);
+}
+
+.footer {
+  background-color: #050608 !important;
+}
+
+.footer a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--space-accent) !important;
+}
+
+/* ==========================================================================
+   KEYFRAME ANIMATIONS
+   ========================================================================== */
+
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-12px) rotate(4deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}

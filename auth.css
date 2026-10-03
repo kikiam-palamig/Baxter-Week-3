@@ -1,0 +1,202 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%),
+                linear-gradient(135deg, #0d1b2a 0%, #1b263b 30%, #415a77 65%, #2a0845 100%);
+    background-blend-mode: screen;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Glassmorphism Card */
+.card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #ffffff;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.brand-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Alert box */
+.form-alert {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    border: 1px solid transparent;
+}
+
+.form-alert[hidden] { display: none; }
+
+.form-alert.success {
+    background: rgba(25, 135, 84, 0.35);
+    border-color: rgba(120, 230, 170, 0.7);
+    color: #d6ffe9;
+}
+
+.form-alert.error {
+    background: rgba(220, 53, 69, 0.35);
+    border-color: rgba(255, 150, 160, 0.7);
+    color: #ffe0e3;
+}
+
+/* Form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder { color: #e0e0e0; }
+
+.form-group input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* jQuery Validation states */
+.form-group input.is-invalid {
+    border-color: #ff8a95;
+    box-shadow: 0 0 6px rgba(255, 138, 149, 0.5);
+}
+
+.form-group input.is-valid {
+    border-color: #7ee2a8;
+}
+
+small.is-invalid {
+    color: #ffb3bb;
+    font-size: 0.78rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Remember me / Forgot password */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.checkbox-label input { cursor: pointer; }
+
+.forgot-link, .card-footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+.forgot-link:hover, .card-footer a:hover { opacity: 0.8; }
+
+/* Submit */
+.submit-btn {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.submit-btn:active { transform: translateY(0); }
+
+.demo-hint {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.78rem;
+    color: #d8d8d8;
+}
+
+.card-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+    .card { padding: 30px 20px; margin: 0 10px; }
+    .brand-title { font-size: 1.75rem; }
+    .form-actions { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
